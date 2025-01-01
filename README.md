@@ -16,10 +16,13 @@ brew "<formula>"
 ```
 
 # Usage
-Run `TerrariaServer` or `terraria-server`. To launch the server with config run `TerrariaServer -config <config file>`. Default server config with comments can be found here: https://github.com/GameServerManagers/Game-Server-Configs/blob/master/Terraria/serverconfig.txt
+
+Run `TerrariaServer` or `terraria-server`. To launch the server with config run `TerrariaServer -config <config file>`. Default server config with comments and list of all parameters can be found here: https://github.com/GameServerManagers/Game-Server-Configs/blob/master/Terraria/serverconfig.txt
 
 > [!NOTE]
 > If you installed specific version of the server (f.e. `terraria-server@1.4.4`), use `TerrariaServer144` or `terraria-server-144` commands to call it.
 
 > [!WARNING]
-> `world` and `worldpath` fields in config do not accept environment variables (`~`, `$HOME`, etc.)
+> `world` and `worldpath` fields in config do not accept environment variables (`~`, `$HOME`, etc.) and the path is relative to binaries' directory (`${HOMEBREW_PREFIX}/Cellar/<server>/<version>/libexec`). Provide full path name to the file you want to work with (f.e. `/Users/<username>/<terraria server directory>/config.txt` on macOS or `/home/<username>/<terraria server directory>/config.txt` on Linux).
+>
+> This also aplies to CLI parameters that accept path
